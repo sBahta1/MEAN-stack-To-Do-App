@@ -1,0 +1,23 @@
+{
+  "name": "week-end-3-challenge-to-do",
+  "version": "1.0.0",
+  "description": "BASE MODE Please make sure to commit at least 15 or more times, you should have a couple commits complete before you leave for the day.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sBahta1/week-end-3-challenge-to-do.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sBahta1/week-end-3-challenge-to-do/issues"
+  },
+  "homepage": "https://github.com/sBahta1/week-end-3-challenge-to-do#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
