@@ -18,7 +18,7 @@
         </header>
         <div class="listContainer">
             <ul>
-                <li>this is an example.<button>completed</button><button>Remove</button></li>
+                <li ng-repeat="thingToDo in hc.toDoArr">{{thingToDo.task}}<button>completed</button><button>Remove</button></li>
             </ul>
 
         </div>

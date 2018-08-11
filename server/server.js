@@ -30,6 +30,15 @@ mongoose.connection.on( 'error', ( error ) => {
 // Static files
 app.use(express.static( 'server/public' ));
 
+//GET Lists
+app.get( '/toDoList',(req,res) => {
+    console.log('GET toDoLists');
+    Task.find( {} ).then((foundTasks) => {
+        res.send(foundTasks);
+    })
+});
+
+
 //POST New Tasks
 app.post( '/toDoList', ( req,res ) => {
     console.log( 'POST to /toDoList req.body =', req.body );
