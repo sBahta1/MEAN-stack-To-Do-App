@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +10,23 @@
     <script src="scripts/client.js" charset="utf-8"></script>
     <title>Honey Do list maker</title>
 </head>
+
 <body ng-app="myApp">
     <div class="container" ng-controller="HoneyController as hc">
-<h1>Hello World!</h1>
+        <header>
+            <h1>To Do List</h1>
+        </header>
+        <div class="listContainer">
+            <ul>
+
+            </ul>
+
+        </div>
+        <footer>
+            <input>
+            <button>Submit</button>
+        </footer>
     </div>
 </body>
+
 </html>
