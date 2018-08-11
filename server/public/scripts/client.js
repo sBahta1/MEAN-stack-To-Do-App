@@ -15,7 +15,7 @@ myApp.controller( 'HoneyController', function($http){
             method:'POST',
             url:'/ToDoList',
             data:newTask
-        }).then(function(resopnse){
+        }).then(function(response){
             console.log('Success!',response.data);
             //GET FUNCTION  GOES HERE
         }).catch(function(error){

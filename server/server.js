@@ -2,6 +2,8 @@
 const express = require( 'express' );
 const app = express();
 const PORT = process.env.PORT || 5000;
+const mongoose = require( 'mongoose' );
+const mongoURI = 'mongodb://localhost:27017/todolists';
 //body parser
 const bodyParser = require( 'body-parser' );
 app.use(bodyParser.json());
@@ -16,8 +18,8 @@ const ToDoSchema = new Schema ({
 const Task = mongoose.model( 'honeyDo', ToDoSchema )
 
 //connecting mongoose and mongodb
-const mongoose = require( 'mongoose' );
-mongoose.connect( mongoURI, { useNewUrlParser: true } );
+
+mongoose.connect(mongoURI,{useNewUrlParser:true} );
 mongoose.connection.on( 'open', () => {
     console.log('Connected to Mongo');
 });
@@ -43,6 +45,6 @@ app.post( '/toDoList', ( req,res ) => {
 
 
 
-app.listen( port,() => {
-    console.log( 'Listening on port', port );    
+app.listen(PORT,() => {
+    console.log( 'Listening on port', PORT );    
 });
