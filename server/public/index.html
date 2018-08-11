@@ -18,13 +18,15 @@
         </header>
         <div class="listContainer">
             <ul>
-
+                <li>this is an example.<button>completed</button><button>Remove</button></li>
             </ul>
 
         </div>
         <footer>
-            <input>
-            <button>Submit</button>
+            <form ng-submit="hc.submitNewTask()">
+                <input type="text" ng-model="hc.newTaskInput">
+                <button>Submit</button>
+            </form>
         </footer>
     </div>
 </body>
