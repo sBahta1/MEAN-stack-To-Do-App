@@ -52,6 +52,14 @@ app.post( '/toDoList', ( req,res ) => {
     })
 });
 
+//Delete tasks
+app.delete('/toDoList/:id',(req,res)=>{
+    Task.findByIdAndRemove(req.params.id).then((response)=>{
+        res.sendStatus(200);
+    }).catch((error)=>{
+        res.sendStatus(500);
+    });
+});
 
 
 app.listen(PORT,() => {

@@ -15,7 +15,7 @@ myApp.controller( 'HoneyController', function($http){
         console.log('this is your new task', newTask);
         $http({
             method:'POST',
-            url:'/ToDoList',
+            url:'/toDoList',
             data:newTask
         }).then(function(response){
             console.log('Success!',response.data);
@@ -39,7 +39,21 @@ function getLists() {
     });
 }
 
-//Populate DOM 
+//Delete tasks
+vm.deleteTask = function (taskId) {
+    $http({
+        method: 'DELETE',
+        url:'/toDoList/'+taskId
+    }).then(function (response){
+        console.log('Task gone');
+        getLists();
+    }).catch(function(error){
+        console.log('Task not deleted', error);
+        alert('Unable to Delete Task', error);        
+    });
+}
+
+//Auto Populate DOM 
 getLists()
 
 
@@ -48,4 +62,4 @@ getLists()
 
 
 
-})
+})//end controller
