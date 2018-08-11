@@ -4,7 +4,8 @@
   "description": "BASE MODE Please make sure to commit at least 15 or more times, you should have a couple commits complete before you leave for the day.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,8 @@
   },
   "homepage": "https://github.com/sBahta1/week-end-3-challenge-to-do#readme",
   "dependencies": {
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "mongodb": "^3.1.1",
+    "mongoose": "^5.2.7"
   }
 }
