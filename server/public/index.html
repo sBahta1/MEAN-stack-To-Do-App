@@ -5,29 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="vendors/css/bootstrap.css">
     <link rel="stylesheet" href="styles/style.css">
+    <script src="vendors/js/bootstrap.js" ></script>
     <script src="vendors/angular.min.js" charset="utf-8"></script>
     <script src="scripts/client.js" charset="utf-8"></script>
     <title>Honey Do list maker</title>
 </head>
 
-<body ng-app="myApp">
+<body ng-app="myApp" class="col-md-10">
     <div class="container" ng-controller="HoneyController as hc">
-        <header>
+        <header class="jumbotron">
             <h1>To Do List</h1>
         </header>
         <div class="listContainer">
-            <ul>
-                <li ng-repeat="thingToDo in hc.toDoArr">{{thingToDo.task}}<button>completed</button><button ng-click="hc.deleteTask(thingToDo._id)">Remove</button></li>
-            </ul>
-
+            <table class="listTable" class="col-md-6">
+                <tbody>
+                <tr ng-repeat="thingToDo in hc.toDoArr">
+                    <td>{{thingToDo.task}}</td><td><button class="btn-success">completed</button></td><td><button  class="btn-danger" ng-click="hc.deleteTask(thingToDo._id)">Remove</button></td>
+                </tr>
+                </tbody>
+            </table>
+            
+                <form ng-submit="hc.submitNewTask()">
+                    <input type="text" ng-model="hc.newTaskInput" placeholder="Add you new task here!" class=col-md-6>
+                    <button class="btn-primary" id="submitBtn">Submit</button>
+                </form>
+           
         </div>
-        <footer>
-            <form ng-submit="hc.submitNewTask()">
-                <input type="text" ng-model="hc.newTaskInput">
-                <button>Submit</button>
-            </form>
-        </footer>
+       
     </div>
 </body>
 

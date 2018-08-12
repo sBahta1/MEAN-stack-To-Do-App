@@ -1,0 +1,48 @@
+*{
+    box-sizing: border-box;
+    align-content: center;
+}
+body{
+    width: 900px;
+    align-self: center;
+    border: 2px solid black;
+    background-image: url(https://images.pexels.com/photos/860379/pexels-photo-860379.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-repeat: no-repeat;
+    margin-right: 0;
+}
+h1{
+    text-align: center;
+}
+.jumbotron{
+    opacity: 0.8;
+}
+.listContainer{
+    background-color: whitesmoke;
+    align-self: center;
+}
+table{
+    border: 2px solid black;
+    width: 100%;
+}
+tr{
+    border: 2px solid black;
+}
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:skyblue;
+    color: white;
+    text-align: center;
+ }
+ button{
+     width:100%
+ }
+ #submitBtn{
+     width:30%;
+     align-self: center;
+ }
+form{
+    align-items: center;
+}
