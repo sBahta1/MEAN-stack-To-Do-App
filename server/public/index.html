@@ -19,7 +19,7 @@
             <h1>To Do List</h1>
         </header>
         <div class="listContainer">
-            <table class="listTable" class="col-md-6">
+            <table class="listTable" class="col-md-6 hover">
                 <tbody>
                     <tr ng-repeat="thingToDo in hc.toDoArr | orderBy: 'completed': false" ng-class="{completed: thingToDo.completed == true}">
                         <td id="listCell">{{thingToDo.task}}</td>
@@ -34,12 +34,10 @@
             </table>
 
             <form ng-submit="hc.submitNewTask()" class="col-md-10">
-                <input type="text" ng-model="hc.newTaskInput" placeholder="Add you new task here!" class=col-md-6>
+                <input type="text" ng-model="hc.newTaskInput" placeholder="Add your new task here!" class=col-md-6>
                 <button class="btn-primary" id="submitBtn">Submit</button>
             </form>
-
-        </div> 
-
+        </div>
     </div>
 </body>
 

@@ -20,7 +20,7 @@ h1{
     border-radius: 20px;
     align-self: center;
     justify-self: center;
-    box-shadow: 5px 10px 18px black;
+    box-shadow: 10px 15px 25px black;
 }
 .jumbotron{
     opacity: 0.9;
@@ -36,11 +36,14 @@ table{
     /*border: 1px solid #698999;*/
     width: 100%;
     opacity: 1;
+ 
 }
+
 tr{
     border-bottom: 1px solid #698999;
     opacity:1;
     text-indent: 15px;
+    transition: transform .2s;
 }
  button{
      width:100%
@@ -60,6 +63,10 @@ input{
     background-color: #84FFE5;
     opacity: 0.6;
 }
+tr:hover{
+    padding:0;
+    transform: scale(1.05); 
+}
 tr.completed{
     background-color: rgb(124, 204, 240);
     text-decoration: line-through;
@@ -70,10 +77,13 @@ tr.completed{
     text-indent: 15px;
 }
 /*
-Colors:
+Colors to potentially use:
     B25049
     F5FFA4
     FF8A82
     538FCC
     5282B2
     C74B6F
+    315561*/
+
+   
