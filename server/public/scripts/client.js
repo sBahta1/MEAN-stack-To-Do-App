@@ -34,6 +34,7 @@ myApp.controller('HoneyController', function ($http) {
         }).then(function (response) {
             console.log('Back from server with:', response.data);
             vm.toDoArr = response.data
+            vm.newTaskInput=''
         }).catch(function (error) {
             alert('Unable to get Lists', error);
         });

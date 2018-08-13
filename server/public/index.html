@@ -22,7 +22,7 @@
             <table class="listTable" class="col-md-6">
                 <tbody>
                     <tr ng-repeat="thingToDo in hc.toDoArr | orderBy: 'completed': false" ng-class="{completed: thingToDo.completed == true}">
-                        <td>{{thingToDo.task}}</td>
+                        <td id="listCell">{{thingToDo.task}}</td>
                         <td>
                             <button class="btn-success" ng-click="hc.taskFinished(thingToDo._id)">completed</button>
                         </td>

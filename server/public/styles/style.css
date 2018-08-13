@@ -3,8 +3,7 @@
 }
 body{
     width: 900px;
-    background-image: url(https://images.pexels.com/photos/860379/pexels-photo-860379.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
-    background-repeat: no-repeat;
+    background-image:url(https://images.pexels.com/photos/860379/pexels-photo-860379.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
     margin: auto;
     font-family: Optima, Arial, sans-serif;
     margin-top: 90px;
@@ -12,7 +11,7 @@ body{
 }
 h1{
     text-align: center;
-    color: #698999;
+    color: #315561;
     font-size: 50px;
 }
 .container{
@@ -34,26 +33,15 @@ h1{
     opacity: 1;
 }
 table{
-    border: 1px solid #698999;
+    /*border: 1px solid #698999;*/
     width: 100%;
     opacity: 1;
 }
 tr{
-    border: 1px solid #698999;
+    border-bottom: 1px solid #698999;
     opacity:1;
-    
+    text-indent: 15px;
 }
-
-
-footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color:skyblue;
-    color: white;
-    text-align: center;
- }
  button{
      width:100%
  }
@@ -66,18 +54,21 @@ footer {
 input{
     height: 40px;
     background-color:white;
+    color: #315561;
 }
 .finished{
     background-color: #84FFE5;
     opacity: 0.6;
 }
 tr.completed{
-    background-color: #56AE5C;
+    background-color: rgb(124, 204, 240);
     text-decoration: line-through;
     opacity: 0.6;
     color:white;
 }
-
+#listCell{
+    text-indent: 15px;
+}
 /*
 Colors:
     B25049
@@ -85,3 +76,4 @@ Colors:
     FF8A82
     538FCC
     5282B2
+    C74B6F
