@@ -21,12 +21,11 @@
         <div class="listContainer">
             <table class="listTable" class="col-md-6">
                 <tbody>
-                    <tr ng-repeat="thingToDo in hc.toDoArr" ng-class="{completed: thingToDo.completed == true}" >
+                    <tr ng-repeat="thingToDo in hc.toDoArr | orderBy: 'completed': false" ng-class="{completed: thingToDo.completed == true}">
                         <td>{{thingToDo.task}}</td>
                         <td>
-                            <button class="btn-success" ng-click="hc.taskFinished(thingToDo._id)" >completed</button>
+                            <button class="btn-success" ng-click="hc.taskFinished(thingToDo._id)">completed</button>
                         </td>
-                        
                         <td>
                             <button class="btn-danger" ng-click="hc.deleteTask(thingToDo._id)">Remove</button>
                         </td>
@@ -34,12 +33,12 @@
                 </tbody>
             </table>
 
-            <form ng-submit="hc.submitNewTask()">
+            <form ng-submit="hc.submitNewTask()" class="col-md-10">
                 <input type="text" ng-model="hc.newTaskInput" placeholder="Add you new task here!" class=col-md-6>
                 <button class="btn-primary" id="submitBtn">Submit</button>
             </form>
 
-        </div>
+        </div> 
 
     </div>
 </body>

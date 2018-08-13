@@ -41,6 +41,7 @@ table{
 tr{
     border: 1px solid #698999;
     opacity:1;
+    
 }
 
 
@@ -59,10 +60,9 @@ footer {
  #submitBtn{
      width:30%;
      align-self: center;
+     height: 40px;
  }
-form{
-    align-items: center;
-}
+
 input{
     height: 40px;
     background-color:white;
@@ -72,8 +72,12 @@ input{
     opacity: 0.6;
 }
 tr.completed{
-    background-color: #84FFE5;
+    background-color: #56AE5C;
+    text-decoration: line-through;
+    opacity: 0.6;
+    color:white;
 }
+
 /*
 Colors:
     B25049
