@@ -1,32 +1,49 @@
 *{
     box-sizing: border-box;
-    align-content: center;
 }
 body{
     width: 900px;
-    align-self: center;
-    border: 2px solid black;
     background-image: url(https://images.pexels.com/photos/860379/pexels-photo-860379.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
     background-repeat: no-repeat;
-    margin-right: 0;
+    margin: auto;
+    font-family: Optima, Arial, sans-serif;
+    margin-top: 90px;
+    margin-bottom: 90px;
 }
 h1{
     text-align: center;
+    color: #698999;
+    font-size: 50px;
+}
+.container{
+    background-color: aliceblue;
+    opacity: 0.9;
+    border-radius: 20px;
+    align-self: center;
+    justify-self: center;
+    box-shadow: 5px 10px 18px black;
 }
 .jumbotron{
-    opacity: 0.8;
+    opacity: 0.9;
+    background-color: #FFCEC8;
+    border-radius: 10px;
+    width:100%;
 }
 .listContainer{
-    background-color: whitesmoke;
     align-self: center;
+    opacity: 1;
 }
 table{
-    border: 2px solid black;
+    border: 1px solid #698999;
     width: 100%;
+    opacity: 1;
 }
 tr{
-    border: 2px solid black;
+    border: 1px solid #698999;
+    opacity:1;
 }
+
+
 footer {
     position: fixed;
     left: 0;
@@ -46,3 +63,21 @@ footer {
 form{
     align-items: center;
 }
+input{
+    height: 40px;
+    background-color:white;
+}
+.finished{
+    background-color: #84FFE5;
+    opacity: 0.6;
+}
+tr.completed{
+    background-color: #84FFE5;
+}
+/*
+Colors:
+    B25049
+    F5FFA4
+    FF8A82
+    538FCC
+    5282B2

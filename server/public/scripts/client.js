@@ -56,7 +56,18 @@ vm.deleteTask = function (taskId) {
 //Auto Populate DOM 
 getLists()
 
-
+//completed tasks
+vm.taskFinished = function (taskId){
+    $http({
+        method:'PUT',
+        url:'/toDoList/'+taskId
+    }).then(function(response){
+        getLists();
+    }).catch(function(response){
+        console.log('unable to change entry');
+        alert('unable to change entry');    
+    })
+}
 
 
 

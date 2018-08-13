@@ -61,6 +61,21 @@ app.delete('/toDoList/:id',(req,res)=>{
     });
 });
 
+//completed Tasks
+app.put('/toDoList/:id',(req,res)=>{
+    console.log('update', req.params.id);
+    Task.findOne({_id: req.params.id}).then((foundTask)=>{
+        console.log(foundTask);
+        foundTask.completed = true;
+        foundTask.save().then((response)=>{
+            res.sendStatus(200);
+        }).catch((error)=>{
+            res.sendStatus(500);
+        });
+    });
+});
+
+
 
 app.listen(PORT,() => {
     console.log( 'Listening on port', PORT );    
