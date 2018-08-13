@@ -42,6 +42,7 @@ myApp.controller('HoneyController', function ($http) {
 
     //Delete tasks
     vm.deleteTask = function (taskId) {
+       
         $http({
             method: 'DELETE',
             url: '/toDoList/' + taskId
@@ -59,6 +60,12 @@ myApp.controller('HoneyController', function ($http) {
 
     //completed tasks
     vm.taskFinished = function (taskId) {
+        swal({
+            title: "Holy Cow!",
+            text: "You work fast!!",
+            icon: "success",
+            button: "Aww yiss!",
+          });
         $http({
             method: 'PUT',
             url: '/toDoList/' + taskId
